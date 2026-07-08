@@ -8,8 +8,7 @@ class StorageService {
   Future<void> salvarFavorito(Livro livro) async {
     final prefs = await SharedPreferences.getInstance();
     List<Livro> favoritos = await obterFavoritos();
-    
-    // Evita duplicatas
+
     if (!favoritos.any((l) => l.id == livro.id)) {
       favoritos.add(livro);
       List<String> favoritosJson = favoritos.map((l) => json.encode(l.toJson())).toList();

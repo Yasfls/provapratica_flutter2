@@ -6,7 +6,6 @@ class ApiService {
   static const String _baseUrl = 'https://openlibrary.org/search.json';
 
   Future<List<Livro>> buscarLivros(String query) async {
-    // Tratamento de erro de rede e conexão
     try {
       final url = Uri.parse('$_baseUrl?q=${query.replaceAll(' ', '+')}&limit=15');
       final response = await http.get(url);
