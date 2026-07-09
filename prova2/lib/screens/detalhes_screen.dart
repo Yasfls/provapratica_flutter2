@@ -57,7 +57,7 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
             if (widget.livro.capaUrl.isNotEmpty)
               Image.network(widget.livro.capaUrl, height: 250)
             else
-              const Icon(Icons.book, size: 150, color: Colors.grey),
+              const Icon(Icons.book, size: 150, color: Color.fromARGB(255, 80, 55, 41)),
             const SizedBox(height: 24),
             Text(
               widget.livro.titulo,
@@ -67,7 +67,7 @@ class _DetalhesScreenState extends State<DetalhesScreen> {
             const SizedBox(height: 8),
             Text(
               'Por: ${widget.livro.autor}',
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.grey[700]),
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(color: const Color.fromARGB(255, 114, 79, 58).withOpacity(0.8)),
             ),
             const Divider(height: 40),
             ListTile(

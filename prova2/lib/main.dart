@@ -14,8 +14,18 @@ class MyApp extends StatelessWidget {
       title: 'Busca de Livros',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true, 
+
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 104, 71, 51),
+          brightness: Brightness.light, 
+        ),
+        useMaterial3: true,
+        
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color.fromARGB(255, 104, 71, 51),
+          foregroundColor: Colors.white,
+          centerTitle: true,
+        ),
       ),
       home: const HomeScreen(),
     );
